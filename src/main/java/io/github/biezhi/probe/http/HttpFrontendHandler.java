@@ -41,7 +41,7 @@ public class HttpFrontendHandler extends SimpleChannelInboundHandler<FullHttpReq
         ChannelFuture f = b.connect(host, port);
         outboundChannel = f.channel();
         msg.retain();
-        ChannelFuture channelFuture = f.addListener(new ChannelFutureListener() {
+        f.addListener(new ChannelFutureListener() {
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (future.isSuccess()) {
                     outboundChannel.writeAndFlush(msg);

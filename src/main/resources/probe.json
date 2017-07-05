@@ -1,0 +1,8 @@
+{
+  "auth": true,
+  "logging": true,
+  "port": 10779,
+  "proxyType": "socks5",
+  "username": "probe",
+  "password": "probe"
+}
